@@ -38,7 +38,6 @@ interface SearchBarProps {
   width?: string;
   height?: string;
   bgColor?: string;
-  borderColor?: string;
   iconSize?: number;
   showButton?: boolean;
 }
@@ -50,7 +49,6 @@ function SearchBar({
   width = "w-full",
   height = "h-16",
   bgColor = "bg-[--search-bg]",
-  borderColor = "",
   iconSize = 20,
   showButton = true,
 }: SearchBarProps) {
@@ -114,9 +112,8 @@ function HeroSection() {
           className="mt-6"
           width="w-[480px]"
           height="h-[64px]"
-          bgColor="!bg-[#3D4754]"
-          borderColor="border-[--search-border]"
-          iconSize={20} 
+          bgColor="!bg-[#3D4754] border-[--search-border]"
+          iconSize={20}
           showButton={true}
         />
       </div>
@@ -142,7 +139,7 @@ function Header() {
           height="h-[40px]"
           bgColor="!bg-[#9EABB8]"
           placeholder="Search"
-          iconSize={16} 
+          iconSize={16}
           showButton={false}
         />
         <Avatar className="w-8 h-8">
