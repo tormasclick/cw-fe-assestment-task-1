@@ -168,7 +168,7 @@ export default function App() {
       <section className="flex items-center justify-center w-full">
         <HeroSection />
       </section>
-      <div className="mt-8" />
+      {/* <div className="mt-8" /> */}
       <TagList title="Trending" tags={tags} />
       <TagList title="For you" tags={tags} />
     </main>
