@@ -82,6 +82,10 @@ Fix: Wrapped onSearch in useCallback to stabilize function references.
 Issue: Inconsistent use of theme variables and hardcoded colors reduced maintainability.
 Fix: Used bg-[--search-bg], bg-[--search-btn], border-[--search-border] where possible, with specific overrides (!bg-[#121417], !bg-[#9EABB8], !bg-[#3D4754], !bg-[#293038], !bg-[#1A80E5]) for design accuracy.
 
+Deployment Fix (Out of Scope)
+Issue: TypeScript errors in src/components/ui/sidebar.tsx (TS1484: VariantProps not imported with type) and src/components/ui/sonner.tsx (TS1484: ToasterProps not imported with type) due to verbatimModuleSyntax: true, preventing Vercel deployment.
+
+Fix: Set verbatimModuleSyntax: false in tsconfig.json to bypass TS1484 errors. 
 
 
 
