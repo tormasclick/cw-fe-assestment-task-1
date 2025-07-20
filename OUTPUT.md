@@ -43,6 +43,9 @@ Utilized bgColor prop with !bg-[#9EABB8] for header (160x40px) and !bg-[#3D4754]
 Issue: Search boxes did not match design specifications for colors, sizes, and borders.
 Fix: Configured header search to !bg-[#9EABB8], no border, rounded-[12px], iconSize={16}, no button. Set hero search to !bg-[#3D4754], border-[--search-border], rounded-[12px], iconSize={20}, with #1A80E5 button. Applied border-none focus:ring-0 focus:outline-none to input and text-[16px] font-work-sans text-[--search-border] to placeholder.
 
+### Mobile Responsiveness
+Fix: Updated hero SearchBar to width="w-full max-w-[480px]" to adapt to mobile viewports while retaining 480px width on desktop.
+
 
 
 ### HeroSection

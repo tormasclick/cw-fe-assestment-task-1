@@ -13,7 +13,7 @@ interface TagListProps {
 
 function TagList({ title, tags }: TagListProps) {
   return (
-    <div className="mt-8 w-[928px] mx-auto">
+    <div className="mt-8 w-full max-w-[928px] mx-auto px-4 md:w-[928px] md:px-0">
       <h2 className="text-[18px] font-bold font-inter text-white bg-[--search-bg] px-2 py-1 rounded">
         {title}
       </h2>
@@ -96,7 +96,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="w-[928px] h-[480px] mx-auto rounded-[--radius-lg] overflow-hidden relative">
+    <div className="w-full max-w-[928px] h-[480px] mx-auto rounded-[--radius-lg] overflow-hidden relative px-4 md:w-[928px] md:px-0">
       <img
         src="/task1/hero-bg.png"
         alt="Hero background image for search section"
@@ -104,13 +104,13 @@ function HeroSection() {
         loading="lazy"
       />
       <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-[48px] font-bold font-inter text-white leading-tight">
+        <h1 className="text-[32px] md:text-[48px] font-bold font-inter text-white leading-tight">
           Search for words, phrases and<br /> meanings
         </h1>
         <SearchBar
           onSearch={onSearch}
           className="mt-6"
-          width="w-[480px]"
+          width="w-full max-w-[480px]"
           height="h-[64px]"
           bgColor="!bg-[#3D4754] border-[--search-border]"
           iconSize={20}
@@ -127,7 +127,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="w-full flex items-center justify-between px-12 sm:px-16 py-2 mx-12 sm:mx-16 dark:bg-background border-b border-[--search-border]">
+    <header className="w-full flex items-center justify-between px-4 py-2 mx-0 md:px-12 md:mx-12 dark:bg-background border-b border-[--search-border]">
       <div className="flex items-center gap-2">
         <img src="/task1/logo.png" alt="Wortionary application logo" className="w-4 h-4" />
         <div className="text-white font-bold font-inter text-[18px]">Wortionary</div>
@@ -168,7 +168,6 @@ export default function App() {
       <section className="flex items-center justify-center w-full">
         <HeroSection />
       </section>
-      {/* <div className="mt-8" /> */}
       <TagList title="Trending" tags={tags} />
       <TagList title="For you" tags={tags} />
     </main>
